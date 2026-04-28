@@ -1,0 +1,17 @@
+name: Hello World WOrkflow
+
+on: 
+  push: 
+    branches:
+     -main
+
+jobs:
+  build:
+  runs-on: ubuntu-latest
+
+  steps:
+  - name:checkout repository
+    uses:actions/checkout@v2
+
+   -name:print a message
+    run :echo "hello , GitHub Actions!"
