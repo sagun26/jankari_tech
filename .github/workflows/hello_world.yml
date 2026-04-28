@@ -4,14 +4,22 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  build:
+  hello:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v5
+      - name: hello world
+        run: echo "Hello world"
+        shell: bash
 
-      - name: Print a message
-        run: echo "Hello, GitHub Actions!"
+  goodbye:
+    runs-on: ubuntu-latest
+    steps:
+      - name: goodbye world
+        run: echo "Good Bye"
+        shell: bash
