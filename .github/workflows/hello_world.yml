@@ -1,17 +1,17 @@
-name: Hello World WOrkflow
+name: Hello world workflow
 
-on: 
-  push: 
+on:
+  push:
     branches:
-     -main
+      - main
 
 jobs:
   build:
-   runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-  steps:
-  - name: checkout repository
-    uses: actions/checkout@v2
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-  - name: print a message
-    run: echo "hello , GitHub Actions!"
+    - name: Print a message
+      run: echo "Hello, GitHub Actions!"
